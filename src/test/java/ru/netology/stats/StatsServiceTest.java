@@ -10,42 +10,42 @@ class StatsServiceTest {
     @Test
     void sumSales() {
         int expectedSum = 260;
-        int actual = service.sumSales(exampleSales);
+        long actual = service.sumSales(exampleSales);
         Assertions.assertEquals(expectedSum, actual);
     }
 
     @Test
     void minSales() {
         int expectedMonth = 2;
-        int actual = service.minSales(exampleSales);
+        long actual = service.minSales(exampleSales);
         Assertions.assertEquals(expectedMonth, actual);
     }
 
     @Test
     void maxSales() {
         int expectedMonth = 10;
-        int actual = service.maxSales(exampleSales);
+        long actual = service.maxSales(exampleSales);
         Assertions.assertEquals(expectedMonth, actual);
     }
 
     @Test
     void averageSales() {
         int expectedMonth = 21;
-        int actual = service.averageSales(exampleSales);
+        long actual = service.averageSales(exampleSales);
         Assertions.assertEquals(expectedMonth, actual);
     }
 
     @Test
     void belowAverageSales() {
         int expectedMonth = 2;
-        int actual = service.belowAverageSales(exampleSales);
+        long actual = service.belowAverageSales(exampleSales);
         Assertions.assertEquals(expectedMonth, actual);
     }
 
     @Test
     void aboveAverageSales() {
         int expectedMonth = 10;
-        int actual = service.aboveAverageSales(exampleSales);
+        long actual = service.aboveAverageSales(exampleSales);
         Assertions.assertEquals(expectedMonth, actual);
     }
 }
