@@ -3,16 +3,16 @@ package ru.netology.stats;
 public class StatsService {
 
     // Сумма всех продаж
-    public long sumSales(int[] sales) {
+    public long sumSales(long[] sales) {
         int sum = 0;
-        for (int sale : sales) {
+        for (long sale : sales) {
             sum += sale;
         }
         return sum;
     }
 
     //  Минимальная сумма продаж
-    public long minSales(int[] sales) {
+    public long minSales(long[] sales) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[minMonth]) { // значит, в рассматриваемом i-м месяце продаж меньше
@@ -24,7 +24,7 @@ public class StatsService {
     }
 
     // Максимальная сумма продаж
-    public long maxSales(int[] sales) {
+    public long maxSales(long[] sales) {
         int maxMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[maxMonth]) {
@@ -35,15 +35,15 @@ public class StatsService {
     }
 
     // Средняя сумма продаж
-    public long averageSales(int[] sales) {
+    public long averageSales(long[] sales) {
         return sumSales(sales) / sales.length;
     }
 
     // продажами ниже среднего
-    public long belowAverageSales(int[] sales) {
+    public long belowAverageSales(long[] sales) {
         long average = averageSales(sales);
         int count = 0;
-        for (int sale : sales) {
+        for (long sale : sales) {
             if (sale > average) {
                 count++;
             }
@@ -52,10 +52,10 @@ public class StatsService {
     }
 
     // продажами выше среднего
-    public long aboveAverageSales(int[] sales) {
+    public long aboveAverageSales(long[] sales) {
         long average = averageSales(sales);
         int count = 0;
-        for (int sale : sales) {
+        for (long sale : sales) {
             if (sale < average) {
                 count++;
             }

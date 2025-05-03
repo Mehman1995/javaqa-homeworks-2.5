@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class StatsServiceTest {
     private final StatsService service = new StatsService();
-    private final int[] exampleSales = {17, 5, 16, 15, 35, 20, 19, 20, 15, 68, 12, 18};
+    private final long[] exampleSales = {17, 5, 16, 15, 35, 20, 19, 20, 15, 68, 12, 18};
 
     @Test
     void sumSales() {
