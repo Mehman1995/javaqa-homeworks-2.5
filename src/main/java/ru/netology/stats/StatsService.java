@@ -3,10 +3,10 @@ package ru.netology.stats;
 public class StatsService {
 
     // Сумма всех продаж
-    public int sumSales(long[] sales) {
+    public long sumSales(long[] sales) {
         int sum = 0;
-        for (long sale : sales) {
-            sum += sale;
+        for (int i = 0; i < sales.length; i++) {
+            sum += sales[i];
         }
         return sum;
     }
@@ -35,16 +35,16 @@ public class StatsService {
     }
 
     // Средняя сумма продаж
-    public int averageSales(long[] sales) {
+    public long averageSales(long[] sales) {
         return sumSales(sales) / sales.length;
     }
 
     // продажами ниже среднего
     public int belowAverageSales(long[] sales) {
-        int average = averageSales(sales);
+        long average = averageSales(sales);
         int count = 0;
-        for (long sale : sales) {
-            if (sale > average) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > average) {
                 count++;
             }
         }
@@ -53,10 +53,10 @@ public class StatsService {
 
     // продажами выше среднего
     public int aboveAverageSales(long[] sales) {
-        int average = averageSales(sales);
+        long average = averageSales(sales);
         int count = 0;
-        for (long sale : sales) {
-            if (sale < average) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < average) {
                 count++;
             }
         }
